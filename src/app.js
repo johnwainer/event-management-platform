@@ -4,12 +4,14 @@ const bodyParser = require('body-parser');
 const eventRoutes = require('./routes/eventRoutes');
 const authRoutes = require('./routes/auth');
 const attendeeRoutes = require('./routes/attendeeRoutes');
+const uploadRoutes = require('./routes/uploadRoutes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/auth', authRoutes);
 app.use('/events', eventRoutes);
+app.use('/events', uploadRoutes);
 app.use('/attendees', attendeeRoutes);
 
 

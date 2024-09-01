@@ -25,4 +25,8 @@ const deleteEvent = async (id) => {
   return deleted > 0;
 };
 
-module.exports = { getAllEvents, createEvent, getEventById, updateEvent, deleteEvent };
+const getEventByName = async (name) => {
+  return await Event.findOne({ where: { name } });
+};
+
+module.exports = { getAllEvents, createEvent, getEventById, updateEvent, deleteEvent, getEventByName };
