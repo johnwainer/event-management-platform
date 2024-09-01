@@ -4,6 +4,10 @@
 
 La plataforma de gestión de eventos permite crear, actualizar y eliminar eventos, gestionar asistentes y obtener informes sobre la asistencia a eventos. Está construida con Node.js y utiliza Sequelize para la interacción con una base de datos MySQL. La aplicación también está contenida en un entorno Docker para simplificar la configuración y el despliegue.
 
+Video explicativo
+
+https://files.fm/u/vuufym74hv?share_email_id=14eb113&share_show_reg_form=true
+
 ## Instalación
 
 Para instalar y ejecutar el proyecto, sigue estos pasos:
