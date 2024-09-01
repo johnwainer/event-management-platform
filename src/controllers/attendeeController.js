@@ -1,4 +1,5 @@
 const attendeeUseCases = require('../usecases/attendeeUseCases');
+const attendanceService = require('../services/attendanceService');
 
 const getAllAttendees = async (req, res) => {
   try {
@@ -18,4 +19,14 @@ const addAttendee = async (req, res) => {
   }
 };
 
-module.exports = { getAllAttendees, addAttendee };
+const getAttendanceReport = async (req, res) => {
+  try {
+      const report = await attendanceService.getAttendanceReport();
+      res.status(200).json(report);
+  } catch (error) {
+      console.error('Error creando el reporte de asistentes:', error);
+      res.status(500).json({ error: 'Error creando el reporte de asistentes' });
+  }
+}
+
+module.exports = { getAllAttendees, addAttendee, getAttendanceReport };
